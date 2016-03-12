@@ -9,6 +9,14 @@ imagemagick \
     php-pgsql \
     php-pdo_pgsql \
     php-zlib \
+    php-exif \
+    php-gd \
+    php-iconv \
+    php-bz2 \
+    php-ctype \    
+    php-posix \
+    php-xml \
+    php-zip \
     ffmpeg 
 
 # Data volumes
