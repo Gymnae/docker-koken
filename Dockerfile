@@ -4,13 +4,9 @@ FROM gymnae/webserverbase
 RUN apk-install \
 imagemagick \
     php-json \
-    php-mcrypt \
     php-openssl \
-    php-pgsql \
     php-pdo_pgsql \
-    php-zlib \
     php-exif \
-    php-gd \
     php-iconv \
     php-bz2 \
     php-ctype \    
