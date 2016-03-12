@@ -3,23 +3,11 @@ FROM gymnae/webserverbase
 #install packages
 RUN apk-install \
 imagemagick \
- php-cli \
-    php-fpm \
-    php-bz2 \
-    php-ctype \
-    php-curl \
-    php-dom \
-    php-exif \
-    php-gd \
-    php-iconv \
     php-json \
     php-mcrypt \
     php-openssl \
     php-pgsql \
     php-pdo_pgsql \
-    php-posix \
-    php-xml \
-    php-zip \
     php-zlib \
     ffmpeg 
 
