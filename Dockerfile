@@ -19,7 +19,7 @@ imagemagick \
 VOLUME ["/media/koken"]
 
 # temp folders for webserver
-RUN mkdir /tmp/nginx/
+RUN mkdir -p /tmp/nginx/
 
 # nginx site conf
 ADD ./config/nginx.conf /etc/nginx/nginx.conf
