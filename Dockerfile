@@ -33,4 +33,4 @@ EXPOSE 80
 ADD init.sh /
 RUN chmod +x /init.sh && chmod 777 /init.sh
 
-CMD ["/init.sh"]
+ENTRYPOINT ["/init.sh"]
