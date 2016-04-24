@@ -19,7 +19,8 @@ imagemagick \
 VOLUME ["/media/koken"]
 
 # temp folders for webserver
-RUN mkdir -p /tmp/nginx/
+RUN mkdir -p /tmp/nginx/ && \
+	chown nginx:www-data /tmp/nginx
 
 # nginx site conf
 ADD ./config/nginx.conf /etc/nginx/nginx.conf
@@ -33,4 +34,4 @@ EXPOSE 80
 ADD init.sh /
 RUN chmod +x /init.sh && chmod 777 /init.sh
 
-CMD ["/init.sh"]
+ENTRYPOINT ["/init.sh"]
