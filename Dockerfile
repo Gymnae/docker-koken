@@ -1,18 +1,17 @@
-FROM gymnae/webserverbase
+FROM gymnae/webserverbase:latest
 
 #install packages
 RUN apk-install \
 imagemagick \
-    php-json \
-    php-openssl \
-    php-pdo_pgsql \
-    php-exif \
-    php-iconv \
-    php-bz2 \
-    php-ctype \    
-    php-posix \
-    php-xml \
-    php-zip \
+    php5-json \
+    php5-pdo_pgsql \
+    php5-exif \
+    php5-iconv \
+    php5-bz2 \
+    php5-ctype \    
+    php5-posix \
+    php5-xml \
+    php5-zip \
     ffmpeg 
 
 # Data volumes
@@ -25,7 +24,7 @@ RUN mkdir -p /tmp/nginx/ && \
 # nginx site conf
 ADD ./config/nginx.conf /etc/nginx/nginx.conf
 ADD ./config/default.conf /etc/nginx/sites-available/default.conf
-ADD ./config/php-fpm.conf /etc/php/php-fpm.conf
+ADD ./config/php-fpm.conf /etc/php5/php-fpm.conf
 ADD ./config/interfaces /etc/network/interfaces
 
 EXPOSE 80
