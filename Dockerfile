@@ -22,10 +22,10 @@ RUN mkdir -p /tmp/nginx/ && \
 	chown nginx:www-data /tmp/nginx
 
 # nginx site conf
-ADD ./config/nginx.conf /etc/nginx/nginx.conf
-ADD ./config/default.conf /etc/nginx/sites-available/default.conf
-ADD ./config/php-fpm.conf /etc/php5/php-fpm.conf
-ADD ./config/interfaces /etc/network/interfaces
+COPY ./config/nginx.conf /etc/nginx/nginx.conf
+COPY ./config/default.conf /etc/nginx/sites-available/default.conf
+COPY ./config/php-fpm.conf /etc/php5/php-fpm.conf
+COPY ./config/interfaces /etc/network/interfaces
 
 EXPOSE 80
 
