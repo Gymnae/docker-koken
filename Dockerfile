@@ -2,7 +2,7 @@ FROM gymnae/webserverbase:latest
 
 #install packages
 RUN apk-install \
-imagemagick \
+    imagemagick \
     php5-json \
     php5-pdo_pgsql \
     php5-exif \
@@ -22,12 +22,12 @@ RUN mkdir -p /tmp/nginx/ && \
 	chown nginx:www-data /tmp/nginx
 
 # nginx site conf
-COPY config/nginx.conf /etc/nginx/nginx.conf
-COPY config/default.conf /etc/nginx/sites-available/default.conf
-COPY config/php-fpm.conf /etc/php5/php-fpm.conf
-COPY config/interfaces /etc/network/interfaces
+COPY config/nginx.conf /etc/nginx/
+COPY config/default.conf /etc/nginx/sites-available/
+COPY config/php-fpm.conf /etc/php5/
+COPY config/interfaces /etc/network/
 
-EXPOSE 80
+EXPOSE 80 443
 
 # Prepare the script that starts it all
 ADD init.sh /
