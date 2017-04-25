@@ -3,15 +3,15 @@ FROM gymnae/webserverbase:latest
 #install packages
 RUN apk-install \
     imagemagick \
-    php5-json \
-    php5-pdo_pgsql \
-    php5-exif \
-    php5-iconv \
-    php5-bz2 \
-    php5-ctype \    
-    php5-posix \
-    php5-xml \
-    php5-zip \
+    php7-json@testing \
+    php7-pdo_pgsql@testing \
+    php7-exif@testing \
+    php7-iconv@testing \
+    php7-bz2@testing \
+    php7-ctype@testing \    
+    php7-posix@testing \
+    php7-xml@testing \
+    php7-zip@testing \
     ffmpeg 
 
 # Data volumes
@@ -24,7 +24,7 @@ RUN mkdir -p /tmp/nginx/ && \
 # nginx site conf
 COPY config/nginx.conf /etc/nginx/
 COPY config/default.conf /etc/nginx/sites-available/
-COPY config/php-fpm.conf /etc/php5/
+COPY config/php-fpm.conf /etc/php7/
 COPY config/interfaces /etc/network/
 
 EXPOSE 80 443
