@@ -12,7 +12,7 @@ sed -i -e"s/worker_processes\s*4/worker_processes $(cat /proc/cpuinfo | grep pro
 
 # start php-fpm
 mkdir -p /media/koken/logs/php-fpm
-php-fpm
+php-fpm7
 
 # start nginx
 mkdir -p /media/koken/logs/nginx
