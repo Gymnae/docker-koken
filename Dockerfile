@@ -12,6 +12,7 @@ RUN apk-install \
     php7-posix@testing \
     php7-xml@testing \
     php7-zip@testing \
+    libzip@community \
     ffmpeg 
 
 # Data volumes
