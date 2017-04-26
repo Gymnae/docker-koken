@@ -4,7 +4,7 @@ FROM gymnae/webserverbase:latest
 RUN apk-install \
     imagemagick \
     php7-json@testing \
-    php7-msqli@testing \
+    php7-mysqli@testing \
     php7-exif@testing \
     php7-iconv@testing \
     php7-bz2@testing \
