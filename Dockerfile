@@ -3,15 +3,15 @@ FROM gymnae/webserverbase:latest
 #install packages
 RUN apk-install \
     imagemagick \
-    php7-json@testing \
-    php7-mysqli@testing \
-    php7-exif@testing \
-    php7-iconv@testing \
-    php7-bz2@testing \
-    php7-ctype@testing \    
-    php7-posix@testing \
-    php7-xml@testing \
-    php7-zip@testing \
+    php7-json@community \
+    php7-mysqli@community \
+    php7-exif@community \
+    php7-iconv@community \
+    php7-bz2@community \
+    php7-ctype@community \    
+    php7-posix@community \
+    php7-xml@community \
+    php7-zip@community \
     libzip@community \
     ffmpeg 
 
