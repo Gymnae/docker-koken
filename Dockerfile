@@ -12,6 +12,7 @@ RUN apk-install \
     php7-posix@community \
     php7-xml@community \
     php7-zip@community \
+    php7-opcache@community \
     libzip@community \
     ffmpeg 
 
