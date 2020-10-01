@@ -3,17 +3,17 @@ FROM gymnae/webserverbase:latest
 #install packages
 RUN apk-install \
     imagemagick \
-    php7-json@community \
-    php7-mysqli@community \
-    php7-exif@community \
-    php7-iconv@community \
-    php7-bz2@community \
-    php7-ctype@community \    
-    php7-posix@community \
-    php7-xml@community \
-    php7-zip@community \
-    php7-opcache@community \
-    libzip@community \
+    php7-json \
+    php7-mysqli \
+    php7-exif \
+    php7-iconv \
+    php7-bz2 \
+    php7-ctype \    
+    php7-posix \
+    php7-xml \
+    php7-zip \
+    php7-opcache \
+    libzip \
     ffmpeg 
 
 # Data volumes
