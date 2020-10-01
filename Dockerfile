@@ -1,7 +1,7 @@
 FROM gymnae/webserverbase:latest
 
 #install packages
-RUN apk-install \
+RUN apk --no-cache \
     imagemagick \
     php7-json \
     php7-mysqli \
